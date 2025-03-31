@@ -1,6 +1,7 @@
 import pygame
 import sys
 import random
+import asyncio
 from script.setting import*
 from script.sprites import Player, CloseRangeEnemy, LongRangeEnemy, DashEnemy
 from script.gridlines import draw_grid
@@ -424,9 +425,11 @@ class Game:
                     
                 
                
-while True:
 
-    Game().run()
-    Game().lose_screen()
-
+async def main():
+        while True:
+            Game().run()
+            Game().lose_screen()
+            await asyncio.sleep(0)  
+asyncio.run(main())
 
