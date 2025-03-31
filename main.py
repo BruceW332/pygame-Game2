@@ -251,7 +251,7 @@ class Game:
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
-                    sys.exit()
+                    
 
 
                 if event.type == self.enemy_event:
@@ -338,7 +338,8 @@ class Game:
                     
                     if event.key == pygame.K_ESCAPE:
                         pygame.quit()
-                        sys.exit()
+                        
+
                         
                         
                         
@@ -409,7 +410,7 @@ class Game:
                 if event.type == pygame.QUIT:
                     waiting = False
                     pygame.quit()
-                    sys.exit()
+                    
                 
                 if event.type == pygame.KEYDOWN:
                     waiting = False
